@@ -37,6 +37,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django.contrib.gis',
+    'leaflet',
     'collector',
 ]
 
@@ -81,7 +83,7 @@ DATABASES = {
         'USER': 'agriconadmin',
         'HOST': 'localhost',
         'PASSWORD': 'aconadmin2021',
-        'PORT': '5432', 
+        'PORT': '5432',
     }
 }
 
@@ -126,5 +128,15 @@ STATIC_URL = '/static/'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
+
+LEAFLET_CONFIG = {
+    'DEFAULT_CENTER': (6.550126, 3.2797893),
+    'DEFAULT_ZOOM': 5,
+    'MAX_ZOOM': 20,
+    'MIN_ZOOM':3,
+    'SCALE': 'both',
+    'ATTRIBUTION_PREFIX': 'Geoint Dept. OEA Consults'
+}
+
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
