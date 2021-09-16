@@ -9,7 +9,7 @@ https://docs.djangoproject.com/en/3.2/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.2/ref/settings/
 """
-
+import  os
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -126,13 +126,18 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
+STATICFILES_DIRS =(
+    os.path.join(BASE_DIR,'static'),
+)
+
+
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 LEAFLET_CONFIG = {
-    'DEFAULT_CENTER': (6.550126, 3.2797893),
-    'DEFAULT_ZOOM': 5,
-    'MAX_ZOOM': 20,
+    'DEFAULT_CENTER': (6.519307, 3.402881),
+    'DEFAULT_ZOOM': 12,
+    'MAX_ZOOM': 15,
     'MIN_ZOOM':3,
     'SCALE': 'both',
     'ATTRIBUTION_PREFIX': 'Geoint Dept. OEA Consults'
