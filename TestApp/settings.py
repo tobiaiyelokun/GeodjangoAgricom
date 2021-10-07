@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.gis',
     'leaflet',
     'collector',
+    'laswa',
 ]
 
 MIDDLEWARE = [

@@ -16,6 +16,9 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from collector import views
+from collector.views import ward_datasets, point_datasets
+from laswa.views import bathy_datasets, route_datasets, chart_datasets
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -23,5 +26,10 @@ urlpatterns = [
     path('',views.HomePageView.as_view()),
 
     path('ward_datasets/', views.ward_datasets, name='ward_datasets'),
-    path('point_datasets/', views.point_datasets, name='point_datasets')
+    path('point_datasets/', views.point_datasets, name='point_datasets'),
+
+    path('bathy_datasets/', bathy_datasets, name='bathy'),
+    path('route_datasets/', route_datasets, name='route'),
+    path('chart_datasets/', chart_datasets, name='chart'),
+
     ]
